@@ -1,9 +1,9 @@
-> [!NOTE]  
-> This code is relatively hacky, but gets the job done. A few people have asked to see it out of curiosity, so it's presented here as-is.
-
 # Trending Links
 
 This app will fetch trending links from a specified list of Mastodon instances, tempoarily write them to a SQLite database, and then produce HTML, RSS and JSON Feed outputs of the most poular links.
+
+> [!NOTE]  
+> This code is relatively hacky, but gets the job done. A few people have asked to see it out of curiosity, so it's presented here as-is.
 
 ## How to install & run
 
