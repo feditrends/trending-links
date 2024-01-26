@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "feditrends - bluesky edition (beta)",
+    "home_page_url": "https://feditrends.com/bluesky",
+    "feed_url": "https://feditrends.com/bluesky/trending-links.json",
+    "language": "en",
+    "items": [
+        {% for link in links -%}
+        {
+            "id": "{{ link.url }}",
+            "title": "{{ link.title | escape | strip_newlines | strip }}",
+            "url": "{{ link.url }}",
+            "image": "{{ link.image }}",
+            "content_text": "{{ link.description | escape | strip_newlines | strip }}",
+            "content_html": "<img src=\"{{ link.image }}\"/><p><strong>{{ link.domain }}</strong> {{ link.description | escape | newline_to_br | strip_newlines | strip}}</p>"
+        }{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    ]
+}
