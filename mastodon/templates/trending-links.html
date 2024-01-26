@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>feditrends</title>
+	<meta name="description" content="Aggregrating the latest trends from across the fediverse.">
+	<meta http-equiv="cleartype" content="on">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="image_src" href="logo.png" />
+	<link rel="shortcut icon" href="logo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+			html, body {
+				font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+			    background-color: #FFFFFF;
+			    color: #333333;
+			    }
+
+			body {
+				margin: 0;
+			}
+
+			.container {
+				max-width: 600px;
+				width: 100%;
+				margin: auto;
+				text-align: center;
+			}
+
+		      .menu h1 {
+		        color: #777777;
+		        font-size: 20px;
+		        display: inline;
+		        margin: 0;
+		        letter-spacing: 0.025rem;
+		      }
+
+		      .logo {
+		        width: 32px;
+		        height: 32px;
+		        display: inline;
+		        margin-right: 8px;
+		      }
+
+			.blue {
+				color: #5B9EE2;
+			}
+
+			h3 {
+				font-weight: 300;
+			}
+
+			.trends {
+				text-align: left;
+				padding: 8px;
+				padding-top: 0;
+			}
+
+			.link {
+			  display: flex;
+			  align-items: center;
+			  background-color: #f5f5f5;
+			  color: #333;
+			  width: 100%;
+			  margin: 0 0 1rem 0;
+			  text-align: left;
+			  border-radius: 6px;
+			}
+
+			.link:hover {
+				background-color: #f1f1f1;
+			}
+
+			.link > img {
+			  width: 140px;
+			  height: 140px;
+			  object-fit: cover;
+			  border-radius: 6px 0px 0px 6px;
+			} 
+
+			.link > div {
+			  flex: 1;
+			  padding: 1rem;
+			}
+
+			.link > div > span {
+				text-transform: uppercase;
+				font-size: 12px;
+				color: #999999;
+			}
+
+			.link h3 {
+			  font-weight: 500;
+			  margin: 0 0 0.5rem 0;
+			  font-size: 1rem;
+			}
+
+			.link p {
+				font-weight: 300;
+			}
+
+			.button {
+				text-decoration: none;
+				color: #777777;
+				font-size: 16px;
+				font-weight: 300;
+			}
+
+			.button:hover {
+				color: #5B9EE2;
+			}
+
+			.trends a {
+				text-decoration: none;
+			}
+
+			.trends > h2 {
+				vertical-align: middle;
+			}
+
+			.tabs {
+				display: flex;
+				font-weight: 500;
+			}
+
+			.tabs > a {
+				width: 33%;
+				border-bottom: 1px solid #CCC;
+				padding: 10px 0px 10px 0px;
+				cursor: pointer;
+				text-decoration: none;
+				color: #333333;
+			}
+
+			.tabs > a:hover {
+				color: #111111;
+			}
+
+			.tabs > .selected {
+				border-bottom: 3px solid #5B9EE2;
+			}
+
+		    .menu {
+		      display: flex;
+		      align-items: center;
+		      padding: 8px 8px;
+		      padding-bottom: 0;
+		      padding-top: 20px;
+		    }
+
+
+		</style>
+</head>
+<body>
+	<div class="container">
+
+		<div class="menu">
+		   <img src="/logo.png" class="logo"/>
+		   <h1>fedi<span class="blue">trends</span></h1>
+		</div>
+
+
+		<div class="trends">
+			<h2>Trending Now&nbsp;
+			<a class="button" href="/trending-links.xml">
+				<svg xmlns="http://www.w3.org/2000/svg" id="RSSicon" viewBox="0 0 8 8" width="16" height="16">
+					<style type="text/css">
+						.button {stroke: none; fill: orange;}
+						.symbol {stroke: none; fill: white;}
+					</style>
+					<rect   class="button" width="8" height="8" rx="1.5" />
+					<circle class="symbol" cx="2" cy="6" r="1" />
+					<path   class="symbol" d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z" />
+					<path   class="symbol" d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z" />
+				</svg>
+			</a>
+			<a class="button" href="/trending-links.json">
+				<svg width="16px" height="16px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				        <g id="icon" transform="translate(-4.000000, -14.000000)">
+				            <rect id="background" fill="#8BE028" x="4" y="14" width="140" height="140"></rect>
+				            <g id="elements" transform="translate(79.549513, 79.549513) rotate(-45.000000) translate(-79.549513, -79.549513) translate(26.049513, 20.549513)">
+				                <path d="M7,64.9835977 L7,65.1904297 C15.2519531,65.1904297 17.9179687,68.4912109 17.9179687,78.4570312 L17.9179687,94.1992187 C17.9179687,110.576172 25.9794922,117.8125 44.2607422,117.8125 L49.8466797,117.8125 L49.8466797,105.942383 L46.9902344,105.942383 C36.6435547,105.942383 32.9619141,102.387695 32.9619141,92.4853516 L32.9619141,74.0136719 C32.9619141,64.4921875 28.7089844,59.2871094 20.3935547,58.5253906 L20.3935547,56.7480469 C28.9628906,55.9228516 32.9619141,51.1621094 32.9619141,41.9580078 L32.9619141,25.390625 C32.9619141,15.2978516 36.5166016,11.8066406 46.9902344,11.8066406 L49.8466797,11.8066406 L49.8466797,0 L44.2607422,0 C25.9160156,0 17.9179687,6.98242187 17.9179687,22.9785156 L17.9179687,36.6259766 C17.9179687,46.5917969 15.1884766,49.9560547 7,49.9560547 L7,50.0164023 C3.09098409,50.2736953 -9.23705556e-14,53.5258787 -9.23705556e-14,57.5 C-9.23705556e-14,61.4741213 3.09098409,64.7263047 7,64.9835977 Z" id="transmitter" fill="#497614"></path>
+				                <g id="dots-@-15pt" transform="translate(42.000000, 50.000000)" fill="#FFFFFF">
+				                    <circle id="Oval-1" cx="7.5" cy="7.5" r="7.5"></circle>
+				                    <circle id="Oval-2" cx="32.5" cy="7.5" r="7.5"></circle>
+				                    <circle id="Oval-3" cx="57.5" cy="7.5" r="7.5"></circle>
+				                </g>
+				            </g>
+				        </g>
+				    </g>
+				</svg>
+			</a>
+			</h2>
+			{% for link in links -%}
+			<a href="{{ link.url }}">
+			<div class="link">
+				<img src="{{ link.image }}" alt="">
+				<div>
+					{% if forloop.index <= 10 %}<span>#{{ forloop.index }} TRENDING</span>{% endif %}
+				    <h3>{{ link.title | strip_newlines | strip }}</h3>
+				    <span>{{ link.domain }}</span>
+			 	</div>
+			</div>
+			</a>
+			{% endfor -%}
+		</div>
+	</div>
+</body>
+</html>

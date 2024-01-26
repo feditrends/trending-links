@@ -1,0 +1,16 @@
+<rss version="2.0">
+  <channel>
+    <title>feditrends</title>
+    <link>https://feditrends.com/</link>
+    <description>Aggregrating the latest trending links from across the fediverse.</description>
+    <language>en</language>
+    {% for link in links -%}
+    <item>
+      <title>{{ link.title | escape | strip_newlines | strip }}</title>
+      <link>{{ link.url | escape_once }}</link>
+      <description><![CDATA[<img src="{{ link.image }}"/><p><strong>{{ link.domain }}</strong> {{ link.description | newline_to_br | strip_newlines | strip }}</p>]]></description>
+      <guid isPermaLink="true">{{ link.url | escape_once }}</guid>
+    </item>
+    {% endfor -%}
+  </channel>
+</rss>
